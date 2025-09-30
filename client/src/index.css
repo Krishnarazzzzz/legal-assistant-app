@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 226 232 240; /* sophisticated gray-blue */
+    --foreground: 30 41 59; /* dark slate */
+    --card: 255 255 255;
+    --card-foreground: 30 41 59;
+    --popover: 255 255 255;
+    --popover-foreground: 30 41 59;
+    --primary: 220 39% 11%; /* deep navy */
+    --primary-foreground: 255 255 255;
+    --secondary: 140 60% 25%; /* indian-green */
+    --secondary-foreground: 255 255 255;
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
+    --accent: 300 100% 25%; /* purple-accent */
+    --accent-foreground: 255 255 255;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 255 255 255;
+    --border: 226 232 240;
+    --input: 241 245 249;
+    --ring: 220 39% 11%;
+    --chart-1: 220 39% 11%; /* deep navy */
+    --chart-2: 140 60% 25%; /* indian green */
+    --chart-3: 200 50% 40%; /* steel blue */
+    --chart-4: 300 100% 25%; /* purple accent */
+    --chart-5: 100 116 139; /* slate gray */
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  .primary-blue {
+    color: hsl(200, 50%, 40%);
+  }
+
+  .indian-green {
+    color: hsl(140, 60%, 25%);
+  }
+
+  .navy {
+    color: hsl(220, 39%, 11%);
+  }
+
+  .purple-accent {
+    color: hsl(300, 100%, 25%);
+  }
+
+  .bg-primary-blue {
+    background-color: hsl(200, 50%, 40%);
+  }
+
+  .bg-indian-green {
+    background-color: hsl(140, 60%, 25%);
+  }
+
+  .bg-navy {
+    background-color: hsl(220, 39%, 11%);
+  }
+
+  .bg-purple-accent {
+    background-color: hsl(300, 100%, 25%);
+  }
+
+  .border-primary-blue {
+    border-color: hsl(200, 50%, 40%);
+  }
+
+  .border-indian-green {
+    border-color: hsl(140, 60%, 25%);
+  }
+
+  .border-navy {
+    border-color: hsl(220, 39%, 11%);
+  }
+
+  .border-purple-accent {
+    border-color: hsl(300, 100%, 25%);
+  }
+
+  .hover\:bg-primary-blue:hover {
+    background-color: hsl(200, 50%, 40%);
+  }
+
+  .hover\:text-primary-blue:hover {
+    color: hsl(200, 50%, 40%);
+  }
+
+  .hover\:border-primary-blue:hover {
+    border-color: hsl(200, 50%, 40%);
+  }
+
+  .text-primary-blue {
+    color: hsl(200, 50%, 40%);
+  }
+
+  .text-indian-green {
+    color: hsl(140, 60%, 25%);
+  }
+
+  .text-navy {
+    color: hsl(220, 39%, 11%);
+  }
+
+  .text-purple-accent {
+    color: hsl(300, 100%, 25%);
+  }
+
+  /* Force override any yellow/orange defaults */
+  .btn-no-yellow, 
+  .btn-no-yellow:hover,
+  .btn-no-yellow:focus,
+  button[class*="yellow"],
+  button[class*="orange"],
+  .bg-yellow-400,
+  .bg-yellow-300,
+  .bg-orange-400 {
+    background-color: hsl(226, 232, 240) !important; /* slate-100 */
+    border-color: hsl(200, 50%, 40%) !important; /* primary-blue */
+    color: hsl(30, 41, 59) !important; /* slate-800 */
+  }
+
+  /* Override any yellow ring focus states */
+  input:focus,
+  button:focus,
+  .focus\:ring-yellow-500:focus {
+    --tw-ring-color: hsl(200, 50%, 40%) !important; /* primary-blue */
+  }
+}
